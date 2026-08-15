@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aadhi Ganesh Store | Premium Store in Mulund West</title>
+
+  <meta
+    name="description"
+    content="Aadhi Ganesh Store in Mulund West — a premium destination for groceries, South Indian sarees, traditional clothing and everyday essentials."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #f7f0df;
+      --cream2: #fffaf0;
+      --brown: #4c291b;
+      --brown2: #2c1710;
+      --gold: #c99b45;
+      --gold2: #e6c477;
+      --green: #334d3c;
+      --text: #302018;
+      --muted: #806e61;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px 7%;
+
+      background: rgba(247, 240, 223, 0.82);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(76, 41, 27, 0.1);
+    }
+
+    .logo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--brown);
+      text-decoration: none;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 35px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: var(--brown);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-btn {
+      background: var(--brown);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      padding: 140px 7% 80px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      background:
+        radial-gradient(circle at 80% 30%, rgba(201,155,69,.22), transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(51,77,60,.10), transparent 25%),
+        var(--cream);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(60px, 7vw, 105px);
+      line-height: .82;
+      color: var(--brown2);
+      font-weight: 600;
+      letter-spacing: -4px;
+      max-width: 700px;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero-description {
+      max-width: 510px;
+      margin: 35px 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 16px 25px;
+      background: var(--brown);
+      color: white;
+
+      border-radius: 100px;
+      text-decoration: none;
+
+      font-size: 14px;
+      transition: .35s;
+    }
+
+    .primary-btn:hover {
+      background: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .secondary-btn {
+      color: var(--brown);
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid var(--brown);
+      padding-bottom: 5px;
+    }
+
+    /* ================= 3D STORE ================= */
+
+    .store-scene {
+      height: 580px;
+      position: relative;
+      perspective: 1200px;
+    }
+
+    .glow {
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+
+      background: radial-gradient(
+        circle,
+        rgba(201,155,69,.30),
+        transparent 65%
+      );
+
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(5px);
+    }
+
+    .store-3d {
+      position: absolute;
+      width: 410px;
+      height: 330px;
+
+      left: 50%;
+      top: 110px;
+
+      transform-style: preserve-3d;
+      transform: translateX(-50%) rotateX(5deg) rotateY(-15deg);
+
+      animation: floatStore 5s ease-in-out infinite;
+    }
+
+    @keyframes floatStore {
+      0%, 100% {
+        transform: translateX(-50%) rotateX(5deg) rotateY(-15deg) translateY(0);
+      }
+      50% {
+        transform: translateX(-50%) rotateX(5deg) rotateY(-15deg) translateY(-18px);
+      }
+    }
+
+    .store-front {
+      position: absolute;
+      width: 410px;
+      height: 330px;
+
+      background:
+        linear-gradient(
+          rgba(76,41,27,.88),
+          rgba(45,23,16,.95)
+        );
+
+      border: 3px solid var(--gold);
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 35px 70px rgba(44,23,16,.3),
+        inset 0 0 40px rgba(230,196,119,.08);
+
+      transform: translateZ(80px);
+    }
+
+    .store-side {
+      position: absolute;
+      width: 160px;
+      height: 330px;
+
+      right: -160px;
+
+      background: #3a2117;
+      border: 3px solid var(--gold);
+
+      transform-origin: left;
+      transform: rotateY(90deg);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .store-roof {
+      position: absolute;
+      width: 410px;
+      height: 160px;
+
+      top: -80px;
+
+      background:
+        repeating-linear-gradient(
+          45deg,
+          #8c682d,
+          #8c682d 12px,
+          #c99b45 12px,
+          #c99b45 24px
+        );
+
+      border: 3px solid #e6c477;
+      transform: rotateX(90deg) translateZ(80px);
+      border-radius: 10px;
+    }
+
+    .store-name {
+      text-align: center;
+      padding-top: 32px;
+
+      font-family: "Cormorant Garamond", serif;
+      color: var(--gold2);
+
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    .store-sub {
+      text-align: center;
+      color: #fff5df;
+      font-size: 10px;
+      letter-spacing: 4px;
+      margin-top: -4px;
+    }
+
+    .store-windows {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .window {
+      width: 90px;
+      height: 95px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(230,196,119,.65),
+          rgba(80,42,25,.7)
+        );
+
+      border: 3px solid var(--gold2);
+      border-radius: 7px;
+    }
+
+    .door {
+      width: 80px;
+      height: 130px;
+      margin: 15px auto 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          #1d130f,
+          #6e4628
+        );
+
+      border: 3px solid var(--gold2);
+      border-radius: 6px 6px 0 0;
+    }
+
+    .signboard {
+      position: absolute;
+      right: -35px;
+      top: -90px;
+
+      background: var(--cream2);
+      color: var(--brown);
+
+      padding: 12px 18px;
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+
+      transform: rotate(8deg);
+      box-shadow: 0 15px 30px rgba(0,0,0,.15);
+    }
+
+    .floating-card {
+      position: absolute;
+      z-index: 10;
+
+      background: rgba(255,250,240,.88);
+      backdrop-filter: blur(15px);
+
+      border: 1px solid rgba(201,155,69,.4);
+      border-radius: 14px;
+
+      padding: 15px 18px;
+
+      box-shadow: 0 15px 40px rgba(76,41,27,.12);
+    }
+
+    .card-one {
+      left: 0;
+      top: 90px;
+    }
+
+    .card-two {
+      right: 0;
+      bottom: 70px;
+    }
+
+    .floating-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+
+    .floating-card strong {
+      color: var(--brown);
+      font-size: 14px;
+    }
+
+    /* ================= MARQUEE ================= */
+
+    .marquee {
+      background: var(--brown);
+      color: var(--gold2);
+      overflow: hidden;
+      padding: 17px 0;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 25s linear infinite;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+    }
+
+    .marquee span {
+      margin: 0 30px;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ================= ABOUT ================= */
+
+    section {
+      padding: 120px 7%;
+    }
+
+    .section-label {
+      color: var(--gold);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(45px, 5vw, 75px);
+      line-height: .9;
+      color: var(--brown);
+      max-width: 700px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 100px;
+      background: var(--cream2);
+    }
+
+    .about-text {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 15px;
+      margin-top: 30px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 35px;
+      background: var(--cream);
+      border: 1px solid rgba(76,41,27,.1);
+      transition: .4s;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 40px rgba(76,41,27,.08);
+    }
+
+    .feature-number {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 35px;
+    }
+
+    .feature h3 {
+      margin: 20px 0 10px;
+      color: var(--brown);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* ================= COLLECTION ================= */
+
+    .collection {
+      background: var(--brown2);
+      color: white;
+    }
+
+    .collection .section-title {
+      color: var(--cream2);
+    }
+
+    .collection-grid {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .collection-card {
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+
+      display: flex;
+      align-items: flex-end;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(20,10,5,.9),
+          transparent 60%
+        ),
+        linear-gradient(
+          135deg,
+          #8d5c32,
+          #3b2117
+        );
+
+      transition: .5s;
+    }
+
+    .collection-card:nth-child(2) {
+      background:
+        linear-gradient(
+          to top,
+          rgba(20,10,5,.9),
+          transparent 60%
+        ),
+        linear-gradient(
+          135deg,
+          #b98a48,
+          #684328
+        );
+    }
+
+    .collection-card:nth-child(3) {
+      background:
+        linear-gradient(
+          to top,
+          rgba(20,10,5,.9),
+          transparent 60%
+        ),
+        linear-gradient(
+          135deg,
+          #425443,
+          #1e3026
+        );
+    }
+
+    .collection-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .collection-info {
+      padding: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .collection-info small {
+      color: var(--gold2);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 9px;
+    }
+
+    .collection-info h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      margin-top: 8px;
+    }
+
+    .collection-info p {
+      color: #d8cbbd;
+      font-size: 13px;
+      margin-top: 7px;
+    }
+
+    /* ================= SAREES ================= */
+
+    .sarees {
+      background: var(--cream);
+    }
+
+    .saree-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+    }
+
+    .saree-description {
+      max-width: 400px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .saree-grid {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .saree {
+      height: 440px;
+      position: relative;
+      overflow: hidden;
+
+      background: #d3a55c;
+
+      border-radius: 4px;
+    }
+
+    .saree::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,.1) 0px,
+          rgba(255,255,255,.1) 2px,
+          transparent 2px,
+          transparent 8px
+        );
+
+      transform: scale(1.4) rotate(8deg);
+    }
+
+    .saree:nth-child(2) {
+      background: #6e2d2c;
+    }
+
+    .saree:nth-child(3) {
+      background: #1e4b42;
+    }
+
+    .saree:nth-child(4) {
+      background: #7b5130;
+    }
+
+    .saree-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      padding: 25px;
+
+      color: white;
+
+      background: linear-gradient(
+        transparent,
+        rgba(0,0,0,.75)
+      );
+    }
+
+    .saree-label h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+    }
+
+    .saree-label p {
+      font-size: 11px;
+      color: #eadfd2;
+      margin-top: 4px;
+    }
+
+    /* ================= LOCATION ================= */
+
+    .location {
+      background: var(--green);
+      color: white;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .location .section-title {
+      color: white;
+    }
+
+    .location-text {
+      color: #cbd4cb;
+      line-height: 1.9;
+      margin-top: 25px;
+    }
+
+    .address-box {
+      margin-top: 30px;
+      padding: 25px;
+
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.05);
+    }
+
+    .address-box strong {
+      display: block;
+      color: var(--gold2);
+      margin-bottom: 8px;
+    }
+
+    .map-box {
+      min-height: 430px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(201,155,69,.25),
+          transparent 45%
+        ),
+        #24372b;
+
+      border: 1px solid rgba(201,155,69,.3);
+    }
+
+    .map-pin {
+      width: 70px;
+      height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--brown);
+
+      font-size: 30px;
+
+      box-shadow:
+        0 0 0 15px rgba(201,155,69,.08),
+        0 0 0 30px rgba(201,155,69,.04);
+
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      50% {
+        transform: scale(1.12);
+      }
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 55px 7%;
+      background: #1b100c;
+      color: #cfc0b3;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .logo {
+      color: var(--cream2);
+    }
+
+    footer p {
+      font-size: 12px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 130px 5% 60px;
+      }
+
+      .hero h1 {
+        font-size: 65px;
+      }
+
+      .store-scene {
+        margin-top: 40px;
+        height: 480px;
+        transform: scale(.82);
+      }
+
+      .about,
+      .location {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      section {
+        padding: 80px 5%;
+      }
+
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .saree-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .saree-intro {
+        display: block;
+      }
+
+      .saree-description {
+        margin-top: 25px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .hero h1 {
+        font-size: 54px;
+        letter-spacing: -2px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .store-scene {
+        transform: scale(.65);
+        transform-origin: center;
+        margin-left: -15%;
+        width: 130%;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .saree-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .saree {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+    <a href="#home" class="logo">
+      Aadhi <span>Ganesh</span>
+    </a>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#sarees">Sarees</a></li>
+      <li><a href="#location">Visit Us</a></li>
+    </ul>
+
+    <a href="#location" class="nav-btn">
+      Visit Store
+    </a>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Mulund West · Mumbai
+        </div>
+
+        <h1>
+          Tradition<br>
+          Meets <em>Everyday</em>
+          Living.
+        </h1>
+
+        <p class="hero-description">
+          Welcome to Aadhi Ganesh Store — a thoughtfully curated
+          destination for everyday groceries, authentic South Indian
+          sarees, traditional clothing and essentials, all under one roof.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#collections" class="primary-btn">
+            Explore Collection →
+          </a>
+
+          <a href="#location" class="secondary-btn">
+            Find Our Store
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- 3D STORE -->
+
+      <div class="store-scene">
+
+        <div class="glow"></div>
+
+        <div class="floating-card card-one">
+          <small>CURATED WITH CARE</small>
+          <strong>Premium Everyday Essentials</strong>
+        </div>
+
+        <div class="floating-card card-two">
+          <small>SOUTH INDIAN EDIT</small>
+          <strong>Silks · Sarees · Tradition</strong>
+        </div>
+
+        <div class="store-3d">
+
+          <div class="store-front">
+
+            <div class="store-name">
+              Aadhi Ganesh
+            </div>
+
+            <div class="store-sub">
+              PREMIUM STORE · MULUND WEST
+            </div>
+
+            <div class="store-windows">
+              <div class="window"></div>
+              <div class="window"></div>
+              <div class="window"></div>
+            </div>
+
+            <div class="door"></div>
+
+          </div>
+
+          <div class="store-side"></div>
+
+          <div class="store-roof"></div>
+
+          <div class="signboard">
+            Since Tradition
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MARQUEE ================= -->
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>GROCERIES</span> ✦
+        <span>SOUTH INDIAN SAREES</span> ✦
+        <span>TRADITIONAL CLOTHING</span> ✦
+        <span>EVERYDAY ESSENTIALS</span> ✦
+        <span>MULUND WEST</span> ✦
+        <span>GROCERIES</span> ✦
+        <span>SOUTH INDIAN SAREES</span> ✦
+        <span>TRADITIONAL CLOTHING</span> ✦
+      </div>
+    </div>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+      <div>
+        <div class="section-label">
+          Our Story
+        </div>
+
+        <h2 class="section-title">
+          One Store.<br>
+          Many Traditions.
+        </h2>
+      </div>
+
+      <div>
+
+        <p class="about-text">
+          Aadhi Ganesh Store brings together the comfort of a trusted
+          neighbourhood grocery store with the beauty of South Indian
+          tradition.
+          <br><br>
+          From everyday kitchen essentials to elegant sarees and
+          traditional clothing, our vision is to create a warm,
+          sophisticated shopping experience for families in Mulund West.
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <div class="feature-number">01</div>
+            <h3>Curated</h3>
+            <p>
+              Carefully selected everyday essentials and traditional
+              collections.
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-number">02</div>
+            <h3>Authentic</h3>
+            <p>
+              A celebration of South Indian fabrics, colours and heritage.
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-number">03</div>
+            <h3>Premium</h3>
+            <p>
+              A refined shopping experience designed around quality and
+              presentation.
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-number">04</div>
+            <h3>Local</h3>
+            <p>
+              Proudly serving the Mulund West community.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= COLLECTIONS ================= -->
+
+    <section class="collection" id="collections">
+
+      <div class="section-label">
+        Explore
+      </div>
+
+      <h2 class="section-title">
+        Everything You Need,<br>
+        Beautifully Curated.
+      </h2>
+
+      <div class="collection-grid">
+
+        <div class="collection-card">
+          <div class="collection-info">
+            <small>01 · Everyday</small>
+            <h3>Groceries</h3>
+            <p>
+              Kitchen staples, pantry essentials and everyday needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-info">
+            <small>02 · Heritage</small>
+            <h3>South Indian</h3>
+            <p>
+              Traditional clothing and timeless South Indian styles.
+            </p>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-info">
+            <small>03 · Occasion</small>
+            <h3>Sarees</h3>
+            <p>
+              Elegant sarees for festivals, celebrations and special days.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SAREES ================= -->
+
+    <section class="sarees" id="sarees">
+
+      <div class="saree-intro">
+
+        <div>
+          <div class="section-label">
+            South Indian Collection
+          </div>
+
+          <h2 class="section-title">
+            Draped in<br>
+            Tradition.
+          </h2>
+        </div>
+
+        <p class="saree-description">
+          Discover a selection inspired by South Indian heritage —
+          rich colours, graceful textures and timeless silhouettes.
+        </p>
+
+      </div>
+
+
+      <div class="saree-grid">
+
+        <div class="saree">
+          <div class="saree-label">
+            <h3>Silk Sarees</h3>
+            <p>Timeless elegance</p>
+          </div>
+        </div>
+
+        <div class="saree">
+          <div class="saree-label">
+            <h3>Kanjivaram</h3>
+            <p>South Indian heritage</p>
+          </div>
+        </div>
+
+        <div class="saree">
+          <div class="saree-label">
+            <h3>Festive Edit</h3>
+            <p>For celebrations</p>
+          </div>
+        </div>
+
+        <div class="saree">
+          <div class="saree-label">
+            <h3>Classic Drapes</h3>
+            <p>Everyday tradition</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= LOCATION ================= -->
+
+    <section class="location" id="location">
+
+      <div>
+
+        <div class="section-label">
+          Visit Us
+        </div>
+
+        <h2 class="section-title">
+          Come Say<br>
+          Namaste.
+        </h2>
+
+        <p class="location-text">
+          Step into Aadhi Ganesh Store and experience a blend of
+          everyday convenience and South Indian tradition in the heart
+          of Mulund West.
+        </p>
+        <br>
+
+        <!-- Replace # with your actual Google Maps link -->
+        <a href="#" class="primary-btn">
+          Get Directions →
+        </a>
+
+      </div>
+
+
+      <div class="map-box">
+
+        <div class="map-pin">
+          ✦
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <a href="#home" class="logo">
+      Aadhi <span>Ganesh</span>
+    </a>
+
+    <p>
+      © 2026 Aadhi Ganesh Store · Mulund West, Mumbai
+    </p>
+
+    <p>
+      Groceries · Sarees · Tradition
+    </p>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    // Subtle mouse movement for the 3D store
+
+    const scene = document.querySelector(".store-scene");
+    const store = document.querySelector(".store-3d");
+
+    scene.addEventListener("mousemove", (e) => {
+
+      const rect = scene.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateY = ((x - centerX) / centerX) * 10;
+      const rotateX = ((centerY - y) / centerY) * 7;
+
+      store.style.animation = "none";
+
+      store.style.transform =
+        `translateX(-50%) rotateX(${rotateX}deg) rotateY(${rotateY - 15}deg) translateY(-8px)`;
+    });
+
+
+    scene.addEventListener("mouseleave", () => {
+
+      store.style.animation = "floatStore 5s ease-in-out infinite";
+
+    });
+
+
+    // Reveal animation
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+
+    document
+      .querySelectorAll(".feature, .collection-card, .saree")
+      .forEach((element) => {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(30px)";
+        element.style.transition = "opacity .8s ease, transform .8s ease";
+
+        observer.observe(element);
+
+      });
+
+  </script>
+
+</body>
+</html>
